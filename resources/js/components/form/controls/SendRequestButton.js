@@ -1,13 +1,13 @@
 import React from 'react'
-import IconAdd from "../../SVGicons/IconAdd";
+import IconAdd from "../../../SVGicons/IconAdd";
 
 import {
 	DEFAULT_URL
-} from "../../constants/defaultConstants";
+} from "../../../constants/defaultConstants";
 
 class SendRequestButton extends React.Component {
 	render() {
-		const url = `${DEFAULT_URL}create`;
+		const url = `${DEFAULT_URL}notes/create`;
 
 		return (
 			<div className={'send-button-wrapper'}>
@@ -15,7 +15,7 @@ class SendRequestButton extends React.Component {
 					type={'submit'}
 					className={'button'}
 					onClick={() => {
-						this.props.sendPalindrome(url)
+						this.props.sendSms(url)
 					}}
 				>
 					<IconAdd

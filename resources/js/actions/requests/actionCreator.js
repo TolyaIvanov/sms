@@ -8,7 +8,7 @@ import {
 } from "../../constants/defaultConstants";
 
 // all requests
-export const fetchPalindromeListSuccess = data => ({
+export const fetchSmsListSuccess = data => ({
 	type: LOAD_ALL_REQUESTS,
 	data,
 });
@@ -19,17 +19,17 @@ export const allRequestsIsLoading = isLoading => ({
 });
 
 										//work with 1 request
-export const fetchPalindrome = data => ({
+export const fetchSms = data => ({
 	type : LOAD_REQUEST_OF_PALINDROME,
 	data,
 });
 
-export const fetchPalindromeIsLoading = isLoading => ({
+export const fetchSmsIsLoading = isLoading => ({
 	type: REQUEST_IS_LOADING,
 	isLoading
 });
 
-export const fetchPalindromeIsAccepted = isAccepted => ({
+export const fetchSmsIsAccepted = isAccepted => ({
 	type: REQUEST_IS_ACCPETED,
 	isAccepted
 });

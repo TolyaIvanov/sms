@@ -10,8 +10,14 @@ export const LOAD_REQUEST_OF_PALINDROME = 'LOAD_REQUEST_OF_Palindrome';
 export const REQUEST_IS_ACCPETED = 'REQUEST_IS_ACCPETED';
 export const REQUEST_IS_LOADING = 'REQUEST_IS_LOADING';
 
-//input changes
-export const INPUT_CHANGES = 'INPUT_CHANGES';
+//form changes
+export const TEXTAREA_HEIGHT_CHANGES = 'TEXTAREA_HEIGHT_CHANGES';
+export const TEXTAREA_VALUE_CHANGES = 'TEXTAREA_VALUE_CHANGES';
+export const TEXTAREA_MIN_ROWS = 3;
+export const TEXTAREA_MAX_ROWS = 8;
+
+//checkbox
+export const CHECKBOX_IS_ACTIVE = 'CHECKBOX_IS_ACTIVE';
 
 //main api route
 export const DEFAULT_URL = 'http://localhost:8000/api/';

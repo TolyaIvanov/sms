@@ -1,19 +1,16 @@
 import {
-	fetchPalindrome,
-	fetchPalindromeIsLoading,
-	fetchPalindromeIsAccepted,
+	fetchSms,
+	fetchSmsIsLoading,
+	fetchSmsIsAccepted,
 
-	fetchPalindromeListSuccess,
+	fetchSmsListSuccess,
 	allRequestsIsLoading,
 } from "./actionCreator";
 
-import {
-	inputChanging
-} from "../input/actionsCreator";
-
 import store from '../../store';
+import {changeTextareaValue} from "../../reducers/form/textarea";
 
-export const fetchPalindromeList = (url) => {
+export const fetchSmsList = (url) => {
 	return dispatch => {
 		dispatch(allRequestsIsLoading(true));
 
@@ -28,21 +25,21 @@ export const fetchPalindromeList = (url) => {
 				return response;
 			}))
 			.then(response => response.json())
-			.then(data => dispatch(fetchPalindromeListSuccess(data)));
+			.then(data => dispatch(fetchSmsListSuccess(data)));
 	}
 };
 
-export const fetchOnePalindrome = (url) => {
+export const fetchOneSms = (url) => {
 	return dispatch => {
 		const input = {
-			value: store.getState().inputChanging
+			value: store.getState().changeTextareaValue
 		};
 
 		input.value = input.value.trim();
 		event.preventDefault();
 
 		if (input.value.length >= 1) {
-			dispatch(fetchPalindromeIsLoading(true));
+			dispatch(fetchSmsIsLoading(true));
 
 			fetch(url, {
 				method: 'POST',
@@ -56,13 +53,13 @@ export const fetchOnePalindrome = (url) => {
 						throw Error(response.statusText)
 					}
 
-					dispatch(fetchPalindromeIsLoading(false));
+					dispatch(fetchSmsIsLoading(false));
 					dispatch(fetchAccepted());
 
 					return response;
 				})
 				.then(response => response.json())
-				.then(data => dispatch(fetchPalindrome(data)));
+				.then(data => dispatch(fetchSms(data)));
 		}
 	}
 };
@@ -70,10 +67,10 @@ export const fetchOnePalindrome = (url) => {
 
 export const fetchAccepted = () => {
 	return dispatch => {
-		dispatch(fetchPalindromeIsAccepted(true));
+		dispatch(fetchSmsIsAccepted(true));
 
 		setTimeout(() => {
-			dispatch(fetchPalindromeIsAccepted(false));
+			dispatch(fetchSmsIsAccepted(false));
 		}, 3000)
 	}
 };

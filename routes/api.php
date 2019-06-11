@@ -13,5 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::post('/notes/create', 'api\NotesController@ccreate');
+Route::post('/notes/create', 'api\NotesController@create');
+
+Route::get('/notes/all', 'api\NotesController@showAll');
 

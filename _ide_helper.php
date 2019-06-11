@@ -5499,7 +5499,7 @@ namespace {
         }
 
         /**
-         * Determine if the request contains a given input item key.
+         * Determine if the request contains a given form item key.
          *
          * @param string|array $key
          * @return bool
@@ -5510,7 +5510,7 @@ namespace {
         }
 
         /**
-         * Determine if the request contains a non-empty value for an input item.
+         * Determine if the request contains a non-empty value for an form item.
          *
          * @param string|array $key
          * @return bool
@@ -5521,7 +5521,7 @@ namespace {
         }
 
         /**
-         * Get all of the input and files for the request.
+         * Get all of the form and files for the request.
          *
          * @return array
          * @static
@@ -5531,7 +5531,7 @@ namespace {
         }
 
         /**
-         * Retrieve an input item from the request.
+         * Retrieve an form item from the request.
          *
          * @param string $key
          * @param string|array|null $default
@@ -5543,7 +5543,7 @@ namespace {
         }
 
         /**
-         * Get a subset of the items from the input data.
+         * Get a subset of the items from the form data.
          *
          * @param array $keys
          * @return array
@@ -5554,7 +5554,7 @@ namespace {
         }
 
         /**
-         * Get all of the input except for a specified array of items.
+         * Get all of the form except for a specified array of items.
          *
          * @param array|mixed $keys
          * @return array
@@ -5647,7 +5647,7 @@ namespace {
         }
 
         /**
-         * Retrieve an old input item.
+         * Retrieve an old form item.
          *
          * @param string $key
          * @param string|array|null $default
@@ -5659,7 +5659,7 @@ namespace {
         }
 
         /**
-         * Flash the input for the current request to the session.
+         * Flash the form for the current request to the session.
          *
          * @param string $filter
          * @param array $keys
@@ -5671,7 +5671,7 @@ namespace {
         }
 
         /**
-         * Flash only some of the input to the session.
+         * Flash only some of the form to the session.
          *
          * @param array|mixed $keys
          * @return void
@@ -5682,7 +5682,7 @@ namespace {
         }
 
         /**
-         * Flash only some of the input to the session.
+         * Flash only some of the form to the session.
          *
          * @param array|mixed $keys
          * @return void
@@ -5693,7 +5693,7 @@ namespace {
         }
 
         /**
-         * Flush all of the old input from the session.
+         * Flush all of the old form from the session.
          *
          * @return void
          * @static
@@ -5703,7 +5703,7 @@ namespace {
         }
 
         /**
-         * Merge new input into the current request's input array.
+         * Merge new form into the current request's form array.
          *
          * @param array $input
          * @return void
@@ -5714,7 +5714,7 @@ namespace {
         }
 
         /**
-         * Replace the input for the current request.
+         * Replace the form for the current request.
          *
          * @param array $input
          * @return void
@@ -8210,7 +8210,7 @@ namespace {
         }
 
         /**
-         * Determine if the request contains a given input item key.
+         * Determine if the request contains a given form item key.
          *
          * @param string|array $key
          * @return bool
@@ -8221,7 +8221,7 @@ namespace {
         }
 
         /**
-         * Determine if the request contains a non-empty value for an input item.
+         * Determine if the request contains a non-empty value for an form item.
          *
          * @param string|array $key
          * @return bool
@@ -8232,7 +8232,7 @@ namespace {
         }
 
         /**
-         * Get all of the input and files for the request.
+         * Get all of the form and files for the request.
          *
          * @return array
          * @static
@@ -8242,7 +8242,7 @@ namespace {
         }
 
         /**
-         * Retrieve an input item from the request.
+         * Retrieve an form item from the request.
          *
          * @param string $key
          * @param string|array|null $default
@@ -8254,7 +8254,7 @@ namespace {
         }
 
         /**
-         * Get a subset of the items from the input data.
+         * Get a subset of the items from the form data.
          *
          * @param array $keys
          * @return array
@@ -8265,7 +8265,7 @@ namespace {
         }
 
         /**
-         * Get all of the input except for a specified array of items.
+         * Get all of the form except for a specified array of items.
          *
          * @param array|mixed $keys
          * @return array
@@ -8358,7 +8358,7 @@ namespace {
         }
 
         /**
-         * Retrieve an old input item.
+         * Retrieve an old form item.
          *
          * @param string $key
          * @param string|array|null $default
@@ -8370,7 +8370,7 @@ namespace {
         }
 
         /**
-         * Flash the input for the current request to the session.
+         * Flash the form for the current request to the session.
          *
          * @param string $filter
          * @param array $keys
@@ -8382,7 +8382,7 @@ namespace {
         }
 
         /**
-         * Flash only some of the input to the session.
+         * Flash only some of the form to the session.
          *
          * @param array|mixed $keys
          * @return void
@@ -8393,7 +8393,7 @@ namespace {
         }
 
         /**
-         * Flash only some of the input to the session.
+         * Flash only some of the form to the session.
          *
          * @param array|mixed $keys
          * @return void
@@ -8404,7 +8404,7 @@ namespace {
         }
 
         /**
-         * Flush all of the old input from the session.
+         * Flush all of the old form from the session.
          *
          * @return void
          * @static
@@ -8414,7 +8414,7 @@ namespace {
         }
 
         /**
-         * Merge new input into the current request's input array.
+         * Merge new form into the current request's form array.
          *
          * @param array $input
          * @return void
@@ -8425,7 +8425,7 @@ namespace {
         }
 
         /**
-         * Replace the input for the current request.
+         * Replace the form for the current request.
          *
          * @param array $input
          * @return void
@@ -10783,7 +10783,7 @@ namespace {
         }
 
         /**
-         * Determine if the session contains old input.
+         * Determine if the session contains old form.
          *
          * @param string $key
          * @return bool
@@ -10794,7 +10794,7 @@ namespace {
         }
 
         /**
-         * Get the requested item from the flashed input array.
+         * Get the requested item from the flashed form array.
          *
          * @param string $key
          * @param mixed $default
@@ -10866,7 +10866,7 @@ namespace {
         }
 
         /**
-         * Flash an input array to the session.
+         * Flash an form array to the session.
          *
          * @param array $value
          * @return void

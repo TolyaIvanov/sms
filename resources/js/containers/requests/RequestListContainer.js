@@ -9,16 +9,13 @@ import {
 } from "../../constants/defaultConstants";
 
 import {
-	fetchPalindromeList
+	fetchSmsList
 } from "../../actions/requests/sendRequest";
 
-import {
-	inputChanging
-} from "../../actions/input/actionsCreator";
 
 class RequestListContainer extends React.Component {
 	componentDidMount() {
-		this.props.fetchData(`${DEFAULT_URL}palindromes`);
+		this.props.fetchData(`${DEFAULT_URL}notes/all`);
 	}
 
 	render() {
@@ -59,7 +56,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-	fetchData: (url) => dispatch(fetchPalindromeList(url))
+	fetchData: (url) => dispatch(fetchSmsList(url))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(RequestListContainer);

@@ -9,16 +9,25 @@ import {
 } from "./requests/requstList";
 
 import {
-	inputChanging
-} from "./input/value";
+	changeTextareaHeight,
+	changeTextareaValue
+} from "./form/textarea";
+
+import {
+	changeCheckboxValue
+} from "./form/checkbox";
 
 export default combineReducers({
 	fetchPalindromeList,
 	allRequestsIsLoading,
+
 	fetchPalindrome,
 	fetchPalindromeIsAccepted,
 	fetchPalindromeIsLoading,
-	inputChanging
+
+	changeTextareaHeight,
+	changeTextareaValue,
+	changeCheckboxValue,
 });
 
 
