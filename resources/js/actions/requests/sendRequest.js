@@ -1,5 +1,4 @@
 import {
-	fetchSms,
 	fetchSmsIsLoading,
 	fetchSmsIsAccepted,
 
@@ -8,7 +7,6 @@ import {
 } from "./actionCreator";
 
 import store from '../../store';
-import {changeTextareaValue} from "../../reducers/form/textarea";
 
 export const fetchSmsList = (url) => {
 	return dispatch => {
@@ -32,10 +30,11 @@ export const fetchSmsList = (url) => {
 export const fetchOneSms = (url) => {
 	return dispatch => {
 		const input = {
-			value: store.getState().changeTextareaValue
+			value: store.getState().changeTextareaValue.value,
+			number: store.getState().changeTextareaValue.number
 		};
 
-		input.value = input.value.trim();
+		input.value = input.value ? input.value.trim() : '';
 		event.preventDefault();
 
 		if (input.value.length >= 1) {
@@ -43,7 +42,7 @@ export const fetchOneSms = (url) => {
 
 			fetch(url, {
 				method: 'POST',
-				body: JSON.stringify(input.value ? input : ''),
+				body: JSON.stringify(input.value ? input : '', input.number),
 				headers: {
 					'Content-Type': 'application/json'
 				}
@@ -59,7 +58,7 @@ export const fetchOneSms = (url) => {
 					return response;
 				})
 				.then(response => response.json())
-				.then(data => dispatch(fetchSms(data)));
+				.then(data => dispatch(fetchSmsListSuccess(data)));
 		}
 	}
 };

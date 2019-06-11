@@ -5,16 +5,7 @@ class ListItem extends React.Component {
 		return (
 			<li className={'request-list-item'}>
 				<div className={'value'}> {this.props.value} </div>
-				<ul className={'palindromes'}>
-					{
-						this.props.palindromes.map((pal) => (
-								<li key={pal} className={'palindrome'}>
-									{pal}
-								</li>
-							)
-						)
-					}
-				</ul>
+				<div className={'number'}> {this.props.sms} </div>
 			</li>
 		);
 	}

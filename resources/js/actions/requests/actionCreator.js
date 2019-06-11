@@ -2,7 +2,6 @@ import {
 	LOAD_ALL_REQUESTS,
 	ALL_REQUESTS_IS_LOADING,
 
-	LOAD_REQUEST_OF_PALINDROME,
 	REQUEST_IS_LOADING,
 	REQUEST_IS_ACCPETED
 } from "../../constants/defaultConstants";
@@ -17,12 +16,7 @@ export const allRequestsIsLoading = isLoading => ({
 	type: ALL_REQUESTS_IS_LOADING,
 	isLoading
 });
-
 										//work with 1 request
-export const fetchSms = data => ({
-	type : LOAD_REQUEST_OF_PALINDROME,
-	data,
-});
 
 export const fetchSmsIsLoading = isLoading => ({
 	type: REQUEST_IS_LOADING,

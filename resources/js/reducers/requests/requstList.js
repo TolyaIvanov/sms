@@ -2,17 +2,16 @@ import {
 	LOAD_ALL_REQUESTS,
 	ALL_REQUESTS_IS_LOADING,
 
-	LOAD_REQUEST_OF_PALINDROME,
 	REQUEST_IS_LOADING,
 	REQUEST_IS_ACCPETED,
 } from "../../constants/defaultConstants";
 
-export const fetchPalindromeList = (state = [], {data, type}) => {
+export const fetchSmsList = (state = [], {data, type}) => {
 	switch (type) {
 		case LOAD_ALL_REQUESTS :
 			return {
 				...state,
-				data
+				data: state.data ? [...state.data, ...data] : data,
 			};
 		default:
 			return state;
@@ -31,19 +30,7 @@ export const allRequestsIsLoading = (state = false, {isLoading, type}) => {
 	}
 };
 
-export const fetchPalindrome = (state = [], {data, type}) => {
-	switch (type) {
-		case LOAD_REQUEST_OF_PALINDROME :
-			return {
-				...state,
-				data
-			};
-		default:
-			return state;
-	}
-};
-
-export const fetchPalindromeIsLoading = (state = false, {isLoading, type}) => {
+export const fetchSmsIsLoading = (state = false, {isLoading, type}) => {
 	switch (type) {
 		case REQUEST_IS_LOADING :
 			return {
@@ -55,7 +42,7 @@ export const fetchPalindromeIsLoading = (state = false, {isLoading, type}) => {
 	}
 };
 
-export const fetchPalindromeIsAccepted = (state = false, {isAccepted, type}) => {
+export const fetchSmsIsAccepted = (state = false, {isAccepted, type}) => {
 	switch (type) {
 		case REQUEST_IS_ACCPETED :
 			return {

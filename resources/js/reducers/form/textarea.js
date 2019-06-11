@@ -16,10 +16,13 @@ export const changeTextareaHeight = (state = [], {type, value, currentRows}) => 
 	}
 };
 
-export const changeTextareaValue = (state = '', {value, type}) => {
+export const changeTextareaValue = (state = '', {value, number, type}) => {
 	switch (type) {
 		case TEXTAREA_VALUE_CHANGES :
-			return value;
+			return {
+				value,
+				number
+			};
 		default:
 			return state;
 	}

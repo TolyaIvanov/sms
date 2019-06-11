@@ -11,11 +11,18 @@ class NotesController extends Controller
 {
     public function create(Request $request)
     {
-        dd($request);
+        $validatedData = $request->validate([
+            'value' => 'required|string',
+            'number' => 'required',
+        ]);
+
+        $note = Notes::create($validatedData);
+
+        return response(['note' => $note]);
     }
 
     public function showAll()
     {
-        return Notes::all();
+        return Notes::orderBy('created_at', 'desc')->get();
     }
 }

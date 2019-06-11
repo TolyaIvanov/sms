@@ -19,18 +19,8 @@ class RequestListContainer extends React.Component {
 	}
 
 	render() {
-		let newCard = null;
-
-		if (this.props.newPalindrome) {
-			newCard = <ListItem
-				value={this.props.newPalindrome.value}
-				palindromes={this.props.newPalindrome.palindromes}
-			/>;
-		}
-
 		return (
 			<RequestList>
-				{newCard}
 				{
 					this.props.data && this.renderRequestList()
 				}
@@ -43,7 +33,7 @@ class RequestListContainer extends React.Component {
 			<ListItem
 				key={listItem.id}
 				value={listItem.value}
-				palindromes={listItem.palindromes}
+				sms={listItem.number}
 			/>
 		));
 	};
@@ -51,8 +41,7 @@ class RequestListContainer extends React.Component {
 
 const mapStateToProps = state => ({
 	isLoading: state.allRequestsIsLoading,
-	data: state.fetchPalindromeList.data,
-	newPalindrome: state.fetchPalindrome.data,
+	data: state.fetchSmsList.data,
 });
 
 const mapDispatchToProps = dispatch => ({

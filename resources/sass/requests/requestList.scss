@@ -11,16 +11,17 @@
 	}
 
 	.value-title,
-	.palindromes-title,
-	.request-list .palindromes,
+	.title,
+	.request-list .number,
 	.request-list .value {
 		width: 400px;
+		word-wrap: break-word;
 	}
 
 	.request-list {
 		margin-top: 25px;
 		width: inherit;
-		
+
 		.request-list-item {
 			display: flex;
 			align-items: center;
@@ -30,6 +31,7 @@
 			margin-bottom: 25px;
 			background-color: #fff;
 			border-radius: 8px;
+			padding: 10px 0;
 		}
 	}
 }

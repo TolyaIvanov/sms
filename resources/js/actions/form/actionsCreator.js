@@ -9,9 +9,10 @@ export const changeTextareaHeight = (currentRows) => ({
 	currentRows,
 });
 
-export const changeTextareaValue = (value) => ({
+export const changeTextareaValue = (value, number) => ({
 	type: TEXTAREA_VALUE_CHANGES,
-	value
+	value,
+	number
 });
 
 export const toggleCheckbox = (value) => ({

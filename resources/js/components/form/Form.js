@@ -3,6 +3,7 @@ import React from 'react';
 import SendRequestButtonContainer from '../../containers/form/controls/SendRequestButtonContainer';
 import InputContainer from '../../containers/form/TextareaContainer';
 import CheckboxContainer from './../../containers/form/controls/CheckboxContainer'
+import InfoContainer from './../../containers/form/InfoContainer'
 
 class Form extends React.Component {
 	render() {
@@ -13,6 +14,7 @@ class Form extends React.Component {
 					<SendRequestButtonContainer/>
 					<CheckboxContainer/>
 				</div>
+				<InfoContainer/>
 			</form>
 		);
 	}

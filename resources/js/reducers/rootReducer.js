@@ -1,11 +1,10 @@
 import {combineReducers} from "redux";
 
 import {
-	fetchPalindromeList,
+	fetchSmsList,
 	allRequestsIsLoading,
-	fetchPalindrome,
-	fetchPalindromeIsAccepted,
-	fetchPalindromeIsLoading
+	fetchSmsIsAccepted,
+	fetchSmsIsLoading
 } from "./requests/requstList";
 
 import {
@@ -18,12 +17,11 @@ import {
 } from "./form/checkbox";
 
 export default combineReducers({
-	fetchPalindromeList,
+	fetchSmsList,
 	allRequestsIsLoading,
 
-	fetchPalindrome,
-	fetchPalindromeIsAccepted,
-	fetchPalindromeIsLoading,
+	fetchSmsIsAccepted,
+	fetchSmsIsLoading,
 
 	changeTextareaHeight,
 	changeTextareaValue,

@@ -75,11 +75,16 @@
 	}
 
 	.checkbox-wrapper {
-		width: 25px;
 		height: 25px;
+		display: flex;
+		align-items: center;
+
+		.checkbox-title {
+			font-size: 14px;
+		}
 
 		.checkbox {
-			width: inherit;
+			width: 25px;
 			height: inherit;
 		}
 	}

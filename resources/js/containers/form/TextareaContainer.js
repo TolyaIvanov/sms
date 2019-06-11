@@ -10,12 +10,8 @@ import {
 
 import {
 	handleTextareaHeight,
+	handleTextareaValue,
 } from "../../actions/form/validateTextarea";
-
-import {
-	changeTextareaValue,
-} from "../../actions/form/actionsCreator";
-
 
 class TextareaContainer extends React.Component {
 	render() {
@@ -41,12 +37,12 @@ class TextareaContainer extends React.Component {
 
 const mapStateToProps = (state) => ({
 	data: state.changeTextareaHeight,
-	value: state.changeTextareaValue,
+	value: state.changeTextareaValue.value,
 });
 
 const mapDispatchToProps = (dispatch) => ({
 	TextareaHeight: (element, minRows, maxRows) => dispatch(handleTextareaHeight(element, minRows, maxRows)),
-	TextareaValue: (value) => dispatch(changeTextareaValue(value)),
+	TextareaValue: (value) => dispatch(handleTextareaValue(value)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TextareaContainer);
